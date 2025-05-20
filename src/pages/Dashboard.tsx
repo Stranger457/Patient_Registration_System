@@ -26,7 +26,7 @@ const Dashboard: React.FC = () => {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-600"></div>
+        <div className="animate-spin rounded-full h-12 w-100 border-t-2 border-b-2 border-primary-600"></div>
       </div>
     );
   }
@@ -51,9 +51,9 @@ const Dashboard: React.FC = () => {
   return (
     <div className="page-transition">
       <header className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+        <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
         <p className="mt-2 text-sm text-gray-600">
-          Welcome to MedicalBlocks, your patient registration system
+          Welcome to MedBlocks, your patient registration system
         </p>
       </header>
 
