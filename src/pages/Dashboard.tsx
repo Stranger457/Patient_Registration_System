@@ -51,14 +51,19 @@ const Dashboard: React.FC = () => {
     return (
         <div className="page-transition">
             <header className="mb-8">
-                <h1 className="text-2xl font-bold text-amber-800"></h1>
-                <p className="mt-2 text-md text-blue-600">
-                    Welcome to MedBlocks, Patient Registration System.....
+                <h1 className="text-3xl text-white font-extrabold text-center" style={{ fontFamily: 'Nunito, sans-serif' }}>
+                    Welcome to MedBlocks, Patient Registration System.
+                </h1>
+                <p className="mt-2 text-center text-white text-sm">
+                    Empowering Healthcare Through Smart Patient Management.
+                </p>
+                <p className="text-center text-white text-sm">
+                    Secure, Streamlined, and Scalable – The Future of Medical Records.
                 </p>
             </header>
 
             <div className="mb-8">
-                <div className="bg-white overflow-hidden shadow border border-black-200 rounded-lg">
+                <div className="bg-[url('/right.jpg')] bg-cover bg-center overflow-hidden shadow border border-black-200 rounded-lg">
                     <div className="p-5">
                         <div className="flex items-center">
                             <div className="flex-shrink-0 bg-primary-100 rounded-md p-3">
@@ -66,7 +71,7 @@ const Dashboard: React.FC = () => {
                             </div>
                             <div className="ml-5 w-0 flex-1">
                                 <dl>
-                                    <dt className="text-sm font-medium text-gray-500 truncate">
+                                    <dt className="text-sm font-medium text-black-900 truncate">
                                         Total Patients
                                     </dt>
                                     <dd>
@@ -80,7 +85,7 @@ const Dashboard: React.FC = () => {
                         <div className="text-sm">
                             <Link
                                 to="/patients"
-                                className="font-medium text-primary-600 hover:text-primary-500"
+                                className="inline-block rounded-lg border border-primary-600 bg-primary-50 px-4 py-2 font-medium text-primary-600 hover:text-primary-500"
                             >
                                 View all patients
                             </Link>
@@ -88,7 +93,7 @@ const Dashboard: React.FC = () => {
                         <span className="inline-flex rounded-md shadow-sm">
                             <Link
                                 to="/register"
-                                className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-black bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
+                                className="inline-flex items-center px-3 py-2 border border-black text-sm leading-4 font-medium rounded-md text-black bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                             >
                                 <UserPlus className="h-4 w-4 mr-1" /> Register New
                             </Link>
@@ -99,15 +104,15 @@ const Dashboard: React.FC = () => {
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {/* Register Patients Card */}
-                <div className="bg-white overflow-hidden shadow border border-black-200 rounded-lg">
+                <div className="bg-[url('/right.jpg')] bg-blur bg-left overflow-hidden shadow border border-black-200 rounded-lg">
                     <div className="p-5">
                         <div className="flex items-center">
                             <div className="flex-shrink-0 bg-primary-100 rounded-md p-3">
                                 <UserPlus className="h-6 w-6 text-primary-600" />
                             </div>
                             <div className="ml-5 w-0 flex-1">
-                                <h4 className="text-sm font-medium text-gray-600">Register Patients</h4>
-                                <p className="mt-1 text-sm text-gray-500">
+                                <h4 className="text-sm font-medium text-black-900">Register Patients</h4>
+                                <p className="mt-1 text-sm text-black-900">
                                     Add new patients
                                 </p>
                             </div>
@@ -126,15 +131,15 @@ const Dashboard: React.FC = () => {
                 </div>
 
                 {/* Query Patients Card */}
-                <div className="bg-white overflow-hidden shadow border border-black-200 rounded-lg">
+                <div className="bg-[url('/right.jpg')] bg-blur bg-left overflow-hidden shadow border border-black-200 rounded-lg">
                     <div className="p-5">
                         <div className="flex items-center">
                             <div className="flex-shrink-0 bg-secondary-100 rounded-md p-3">
                                 <Search className="h-6 w-6 text-secondary-600" />
                             </div>
                             <div className="ml-5 w-0 flex-1">
-                                <h3 className="text-sm font-medium text-gray-900">Patient Records</h3>
-                                <p className="mt-1 text-sm text-gray-500">
+                                <h3 className="text-sm font-medium text-black-900">Patient Records</h3>
+                                <p className="mt-1 text-sm text-black-900">
                                     Search and filter patient records
                                 </p>
                             </div>
@@ -153,15 +158,15 @@ const Dashboard: React.FC = () => {
                 </div>
 
                 {/* Database Info Card */}
-                <div className="bg-white overflow-hidden shadow border border-black-200 rounded-lg">
+                <div className="bg-[url('/right.jpg')] bg-blur bg-left overflow-hidden shadow border border-black-200 rounded-lg">
                     <div className="p-5">
                         <div className="flex items-center">
                             <div className="flex-shrink-0 bg-accent-100 rounded-md p-3">
                                 <DatabaseIcon className="h-6 w-6 text-accent-600" />
                             </div>
                             <div className="ml-5 w-0 flex-1">
-                                <h3 className="text-sm font-medium text-gray-900">Database Status</h3>
-                                <p className="mt-1 text-sm text-gray-500">
+                                <h3 className="text-sm font-medium text-blaack-900">Database Status</h3>
+                                <p className="mt-1 text-sm text-black-900">
                                     Using Pglite with multi-tab support
                                 </p>
                             </div>
