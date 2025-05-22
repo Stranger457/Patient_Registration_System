@@ -14,6 +14,8 @@ A modern patient registration system that runs entirely in your browser using PG
 
 ## 🚀 Demo
 
+Vercel : https://patient-registration-system-ashy.vercel.app/
+
 
 <img width="1440" alt="Dashboard" src="https://github.com/user-attachments/assets/c47b713e-5783-43a9-8812-464a0e953e96" />
 
