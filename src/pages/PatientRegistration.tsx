@@ -120,25 +120,31 @@ const PatientRegistration: React.FC = () => {
     return (
         <div className="page-transition">
             <header className="mb-8">
-                <h1 className="text-lg font-bold text-blue-600">Register New Patient</h1>
-                <p className="mt-2 text-sm text-gray-600">
+                <h1 className="text-lg font-bold text-white">Register New Patient</h1>
+                <p className="mt-2 text-sm text-white">
                     Please complete all required fields marked with a *
                 </p>
             </header>
 
             {submitSuccess && (
-                <div className="mb-6 bg-success-50 border-l-4 border-success-500 p-4 slide-in">
-                    <div className="flex">
-                        <div className="flex-shrink-0">
-                            <svg className="h-5 w-5 text-success-500" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                            </svg>
-                        </div>
-                        <div className="ml-3">
-                            <p className="text-sm text-success-700">
-                                Patient registered successfully!
-                            </p>
-                        </div>
+                <div className="fixed top-1/2 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 bg-[url('/right.jpg')] bg-blur bg-center text-white w-96 p-6 rounded-lg shadow-xl animate-fade-in">
+                    <div className="flex flex-col items-center">
+                        <svg className="h-10 w-10 mb-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                fillRule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clipRule="evenodd"
+                            />
+                        </svg>
+                        <p className="text-lg font-semibold text-center mb-4">
+                            Patient registered successfully!
+                        </p>
+                        <button
+                            onClick={() => setSubmitSuccess(false)}
+                            className="mt-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+                        >
+                            OK
+                        </button>
                     </div>
                 </div>
             )}
@@ -391,7 +397,7 @@ const PatientRegistration: React.FC = () => {
                                     }}
                                     className={`form-input mt-2 h-24 w-full px-4 py-3 border border-black ${errors.past_medical_history ? 'border-error-500 focus:ring-error-500 focus:border-error-500' : ''
                                         }`}
-                                    placeholder="Please mention any past medical conditions or diseases"
+                                    placeholder="Please mention any past medical conditions or diseases if not put N/A"
                                     required
                                 />
 
