@@ -71,11 +71,11 @@ const Dashboard: React.FC = () => {
                             </div>
                             <div className="ml-5 w-0 flex-1">
                                 <dl>
-                                    <dt className="text-sm font-medium text-black-900 truncate">
+                                    <dt className="text-sm font-medium font-bold text-black truncate">
                                         Total Patients
                                     </dt>
                                     <dd>
-                                        <div className="text-lg font-medium text-gray-900">{patientCount}</div>
+                                        <div className="text-lg font-medium text-black-900">{patientCount}</div>
                                     </dd>
                                 </dl>
                             </div>
@@ -124,7 +124,10 @@ const Dashboard: React.FC = () => {
                                 to="/register"
                                 className="font-medium text-primary-600 hover:text-primary-500"
                             >
-                                Register new patient →
+                                <span className="inline-flex items-center space-x-1">
+                                    <span>Register new patient</span>
+                                    <span className="animate-arrow-move text-primary-600">→</span>
+                                </span>
                             </Link>
                         </div>
                     </div>
@@ -148,10 +151,13 @@ const Dashboard: React.FC = () => {
                     <div className="bg-gray-50 px-5 py-3">
                         <div className="text-sm">
                             <Link
-                                to="/query"
-                                className="font-medium text-secondary-600 hover:text-secondary-500"
+                                to="/register"
+                                className="font-medium text-primary-600 hover:text-primary-500"
                             >
-                                Go to query interface →
+                                <span className="inline-flex items-center space-x-1">
+                                    <span>Register new patient</span>
+                                    <span className="animate-arrow-move text-primary-600">→</span>
+                                </span>
                             </Link>
                         </div>
                     </div>
