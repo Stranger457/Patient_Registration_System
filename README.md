@@ -14,15 +14,10 @@ A modern patient registration system that runs entirely in your browser using PG
 
 ## 🚀 Demo
 
-![1747941746137](image/README/1747941746137.png)
 
-![1747941851678](image/README/1747941851678.png)
+<img width="1440" alt="Dashboard" src="https://github.com/user-attachments/assets/c47b713e-5783-43a9-8812-464a0e953e96" />
 
-![1747942095040](image/README/1747942095040.png)
 
-![1747942132116](image/README/1747942132116.png)
-
----
 
 ## 📦 Installation
 
