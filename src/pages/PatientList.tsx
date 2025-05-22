@@ -117,8 +117,8 @@ const PatientList: React.FC = () => {
     return (
         <div className="page-transition">
             <header className="mb-8">
-                <h1 className="text-lg font-bold text--600">Patient List</h1>
-                <p className="mt-2 text-sm text-gray-600">
+                <h1 className="text-lg font-bold text-white">Patient List</h1>
+                <p className="mt-2 text-sm text-white">
                     View and search all registered patients
                 </p>
             </header>
@@ -180,7 +180,7 @@ const PatientList: React.FC = () => {
                         <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <h3 className="mt-2 text-sm font-medium text-gray-900">No patients found</h3>
+                        <h3 className="mt-2 text-sm font-medium text-white">No patients found</h3>
                         <p className="mt-1 text-sm text-gray-500">
                             {searchTerm ? 'No patients match your search criteria.' : 'Get started by adding a new patient.'}
                         </p>
@@ -291,9 +291,13 @@ const PatientList: React.FC = () => {
                 </div>
             )}
 
-            <div className="mt-4 text-right text-sm text-gray-500">
-                {patients.length} {patients.length === 1 ? 'patient' : 'patients'} found
-            </div>
+            {isLoading ? (
+                <div className="mt-4 text-right text-sm text-white">Loading...</div>
+            ) : (
+                <div className="mt-4 text-right text-sm text-white">
+                    {patients.length} {patients.length === 1 ? 'patient' : 'patients'} found
+                </div>
+            )}
         </div>
     );
 };
