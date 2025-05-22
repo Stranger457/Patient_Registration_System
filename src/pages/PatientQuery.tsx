@@ -74,8 +74,8 @@ const PatientQuery: React.FC = () => {
     return (
         <div className="page-transition">
             <header className="mb-8">
-                <h1 className="text-lg font-bold text-blue-600">Patient Query</h1>
-                <p className="mt-2 text-sm text-gray-600">
+                <h1 className="text-lg font-bold text-white">Patient Query</h1>
+                <p className="mt-2 text-sm text-white">
                     Run custom SQL queries against the patient database
                 </p>
             </header>
@@ -89,7 +89,7 @@ const PatientQuery: React.FC = () => {
                         <textarea
                             id="sqlQuery"
                             rows={5}
-                            className="form-input font-mono text-sm"
+                            className="form-input font-mono text-sm border border-black focus:border-black focus:ring-black"
                             value={sqlQuery}
                             onChange={handleQueryChange}
                             placeholder="Enter your SQL query here..."
