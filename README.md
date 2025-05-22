@@ -17,6 +17,12 @@ A modern patient registration system that runs entirely in your browser using PG
 
 <img width="1440" alt="Dashboard" src="https://github.com/user-attachments/assets/c47b713e-5783-43a9-8812-464a0e953e96" />
 
+<img width="1440" alt="RegisterPatient" src="https://github.com/user-attachments/assets/55d5c16e-05f2-4a01-a3d5-60cfc316cf83" />
+
+<img width="1440" alt="PatientQuery" src="https://github.com/user-attachments/assets/a6852457-277a-44cd-b5b9-cfcb68df59b4" />
+
+<img width="1440" alt="PatientList" src="https://github.com/user-attachments/assets/0fd4f480-62e1-4d3b-9faf-3622c45ca766" />
+
 
 
 ## 📦 Installation
@@ -48,32 +54,8 @@ cd Patient_Registration_System
 
 ## Project Structure
 
-patient-registration-system
+<img width="726" alt="projstruct" src="https://github.com/user-attachments/assets/d3655c73-c6f6-4872-9b9b-109eaad96339" />
 
-
-
-
-
-/
-├── public/
-│   └── pglite-worker.js     # PGlite worker for multi-tab support
-├── src/
-│   ├── components/          # Reusable UI components
-│   ├── context/             # React context providers
-│   │   └── DatabaseContext.tsx
-│   ├── pages/               # Application pages
-│   │   ├── Dashboard.tsx
-│   │   ├── PatientList.tsx
-│   │   ├── PatientQuery.tsx
-│   │   └── PatientRegistration.tsx
-│   ├── services/            # Core services
-│   │   └── DatabaseService.ts
-│   ├── App.tsx              # Main application component
-│   ├── main.tsx             # Application entry point
-│   └── index.css            # Global styles
-├── package.json
-├── tsconfig.json
-└── vite.config.ts
 
 ## 📱 Usage Guide
 
