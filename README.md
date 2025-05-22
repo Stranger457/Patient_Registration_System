@@ -53,7 +53,13 @@ cd Patient_Registration_System
 
 ## Project Structure
 
-patient-system-pglite/
+patient-registration-system
+
+
+
+
+
+/
 ├── public/
 │   └── pglite-worker.js     # PGlite worker for multi-tab support
 ├── src/
