@@ -87,3 +87,76 @@ cd Patient_Registration_System
 * **React Router** - Application routing
 * **Lucide React** - Icon library
 * **Vite** - Build tool and development server
+
+## 📝 Project Development Summary: Key Challenges, Fixes
+
+During the development of a patient management system using **ElectricSQL’s PGlite** (an in-browser SQLite database), I faced and resolved several important challenges. Below is a detailed, human-centric overview of the problems encountered, how I addressed them, and what I learned throughout the process.
+
+* **1. **Enabling True Local Persistence with IndexedDB****
+
+ **Challenge:**
+
+Initially, the in-browser SQLite database (**PGliteWorker**) stored data only in memory. This meant that **data was wiped out on every tab refresh or browser restart** — even though the table wasn’t being dropped anymore.
+
+**Solution:**
+
+I solved this by **backing the database with IndexedDB**, which allows persistent storage across browser sessions.
+
+import { PGlite } from '@electric-sql/pglite';
+import { worker } from '@electric-sql/pglite/worker';
+
+worker({
+  async init() {
+    return new PGlite('idb://my-pgdata'); // 🧠 Uses IndexedDB for persistence
+  },
+});
+
+**Why this matters:**
+
+* **IndexedDB** acts like a permanent storage layer in the browser.
+* The **'idb://my-pgdata'** URI tells PGlite to **persist the SQLite database** using the browser’s IndexedDB.
+* Users can now **refresh the page or reopen the browser** without losing any patient data.
+* Greatly improves the user experience for **offline-first** or **client-only** apps.
+
+**2. Ensuring Persistent Local Data (Preventing Data Loss on Refresh)**
+
+**Challenge:**
+
+Initially, the database schema setup logic dropped and recreated the **patients** table every time the app loaded. This led to **loss of all existing patient records** on every refresh.
+
+DROP TABLE IF EXISTS patients;    // Problem 
+CREATE TABLE patients (...);
+
+**Impact:**
+
+* Patient records were lost on every page reload.
+* Made testing and form submissions frustrating.
+* Not realistic for local-first experiences.
+
+**Solution:**
+
+I removed the **DROP TABLE** and used a safe creation pattern:
+
+ **await** database.query(**`**
+
+    CREATE TABLE IF NOT EXISTS patients (
+
+    id SERIAL PRIMARY KEY,
+
+    first_name TEXT NOT NULL,...........)
+
+so now its effective from :
+
+* Prevents accidental data loss.
+* Works well even across multiple app sessions
+* Enables more realistic local development.
+
+**3. Handling Complex Form Input in Patient Registration**
+
+**Managed Optional and Nested Patient Fields**
+
+Carefully handled optional fields (like **email**, **insurance_id**, **allergies**) by inserting **null** values if left empty, avoiding insertion errors.
+
+**Simplified Form Grouping & State Handling**
+
+Broke down complex form structure (address, medical history, insurance) into manageable state blocks for better readability and user experience.
